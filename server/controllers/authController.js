@@ -4,7 +4,6 @@ const client_id = process.env.CLIENT_ID;
 const client_secret = process.env.CLIENT_SECRET;
 const redirect_uri = 'http://localhost:8080/login/route/'; // development
 // const redirect_uri = 'http://localhost:3001/login/route/'; // production
-const db = require('../models/festivalModels');
 const authController = {};
 
 authController.spotifyLogin = (req, res, next) => {

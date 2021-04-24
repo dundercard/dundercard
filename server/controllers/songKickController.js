@@ -50,20 +50,8 @@ songKickController.eventParser = (req, res, next) => {
   });
 
   res.locals.event = festivalDetails;
-  console.log(festivalDetails);
+  // console.log('Parsed festival details:', festivalDetails);
   return next();
-};
-
-// **** TEMPORARY CONTROLLER FOR FAKING SONGKICK API **** //
-songKickController.serveJSON = (req, res, next) => {
-  console.log('serveJSON fired...');
-  const dataDir = path.resolve(__dirname, '../data/json');
-  const eventId = req.query.id;
-  fs.readFile(`${dataDir}/${eventId}.json`, (err, data) => {
-    data = JSON.parse(data);
-    res.locals.data = data;
-    return next();
-  });
 };
 
 module.exports = songKickController;

@@ -29,9 +29,4 @@ router.post(
   }
 );
 
-// **** TEMPORARY ROUTE TO MOCK SONGKICK API **** //
-router.get('/data', songKickController.serveJSON, (req, res) => {
-  return res.status(200).send(res.locals.data);
-});
-
 module.exports = router;
