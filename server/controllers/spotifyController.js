@@ -1,7 +1,5 @@
 const fetch = require('node-fetch');
 
-const db = require('../models/festivalModels');
-
 spotifyController = {};
 
 spotifyController.getArtistId = (req, res, next) => {
